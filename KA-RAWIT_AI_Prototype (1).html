@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KA-RAWIT AI — SD Negeri 1 Pojok</title>
+<style>
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;background:#f5f7fb;color:#182230}
+button{font:inherit;cursor:pointer}.app{display:flex;min-height:100vh}.side{width:250px;background:#123b32;color:#fff;padding:22px 16px;position:fixed;inset:0 auto 0 0}.brand{font-weight:800;font-size:22px;line-height:1.1;margin-bottom:5px}.sub{font-size:12px;color:#c9dfd7;margin-bottom:28px}.nav button{display:block;width:100%;border:0;background:transparent;color:#e8f5f0;text-align:left;padding:12px 14px;border-radius:12px;margin:5px 0}.nav button.active,.nav button:hover{background:#1d5749}.main{margin-left:250px;width:calc(100% - 250px);padding:28px;max-width:1400px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.pill{background:#e7f2ed;color:#17634e;border-radius:999px;padding:8px 13px;font-size:13px;font-weight:700}.hero{background:linear-gradient(135deg,#17644f,#2b876a);color:white;border-radius:24px;padding:30px;display:flex;justify-content:space-between;gap:20px;overflow:hidden}.hero h1{font-size:34px;margin:5px 0 10px}.hero p{max-width:700px;color:#e5f6ef;line-height:1.6}.hero .cta{background:#f4c84d;color:#26331e;border:0;border-radius:12px;padding:12px 17px;font-weight:800}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:22px 0}.card{background:white;border:1px solid #e4e9ef;border-radius:18px;padding:19px;box-shadow:0 5px 18px #123b3208}.card h3{margin:9px 0 6px}.muted{color:#6b7785;font-size:13px;line-height:1.5}.icon{font-size:30px}.section{display:none}.section.active{display:block}.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.panel{background:white;border:1px solid #e4e9ef;border-radius:18px;padding:20px}.list button{width:100%;text-align:left;background:#f7f9fb;border:1px solid #e5eaf0;border-radius:12px;padding:13px;margin:6px 0}.chat{height:360px;overflow:auto;background:#f7f9fb;border-radius:14px;padding:14px}.msg{max-width:78%;padding:11px 13px;border-radius:14px;margin:8px 0;line-height:1.45}.ai{background:#e4f1ec}.me{background:#dce8ff;margin-left:auto}.input{display:flex;gap:8px;margin-top:10px}.input input{flex:1;padding:12px;border:1px solid #dbe2ea;border-radius:12px}.input button{border:0;background:#17644f;color:#fff;border-radius:12px;padding:0 17px}.quiz button{margin:7px 0;padding:12px;border:1px solid #dfe5eb;background:#fff;border-radius:11px;width:100%;text-align:left}.score{font-weight:800;color:#17644f;margin-top:10px}.back{font-size:13px;color:#17644f;margin-bottom:14px}.footer{font-size:12px;color:#7b8793;margin-top:28px}
+@media(max-width:900px){.side{width:200px}.main{margin-left:200px;width:calc(100% - 200px)}.cards{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}}
+@media(max-width:650px){.side{position:static;width:100%;min-height:auto}.app{display:block}.main{margin:0;width:100%;padding:18px}.cards{grid-template-columns:1fr}.hero{padding:22px}.hero h1{font-size:28px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side">
+  <div class="brand">🎼 KA-RAWIT AI</div>
+  <div class="sub">SD Negeri 1 Pojok • Boyolali</div>
+  <nav class="nav">
+    <button class="active" data-page="home">🏠 Beranda</button>
+    <button data-page="gamelan">🥁 Kenali Gamelan</button>
+    <button data-page="quiz">🎧 Tebak Bunyi</button>
+    <button data-page="chat">🤖 Tanya KA-RAWIT</button>
+    <button data-page="creator">✍️ Kreator Lirik</button>
+    <button data-page="story">📖 Cerita Karawitan</button>
+    <button data-page="reflection">💭 Refleksi Belajar</button>
+    <button data-page="teacher">👩‍🏫 Ruang Guru</button>
+  </nav>
+</aside>
+
+<main class="main">
+<header class="top"><div><b id="pageTitle">Beranda</b><div class="muted">Belajar budaya, teknologi, dan karakter secara bermakna.</div></div><span class="pill">Kelas I–VI</span></header>
+
+<section id="home" class="section active">
+  <div class="hero">
+    <div><div class="pill">PROGRAM INOVASI PEMBELAJARAN</div><h1>Belajar Karawitan dengan Teknologi,<br>Berkarya dengan Budaya.</h1><p>KA-RAWIT AI memadukan kecerdasan artifisial, kearifan lokal karawitan, kreativitas, kolaborasi, dan refleksi dalam pembelajaran mendalam.</p><button class="cta" onclick="go('gamelan')">Mulai Belajar →</button></div>
+    <div style="font-size:100px;align-self:center">🎶</div>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="icon">🎼</div><h3>Budaya Lokal</h3><div class="muted">Mengenal gamelan dan nilai budaya karawitan Pojok.</div></div>
+    <div class="card"><div class="icon">🤖</div><h3>AI Pendamping</h3><div class="muted">AI membantu siswa bertanya, mencari ide, dan berkarya.</div></div>
+    <div class="card"><div class="icon">🤝</div><h3>Kolaborasi</h3><div class="muted">Belajar bersama melalui praktik karawitan dan proyek kelompok.</div></div>
+    <div class="card"><div class="icon">💡</div><h3>Refleksi</h3><div class="muted">Siswa menghubungkan pengalaman belajar dengan karakter.</div></div>
+  </div>
+  <div class="panel"><h2>Alur KA-RAWIT</h2><p class="muted">Kenali → Eksplorasi → Praktik → Berkarya → Presentasi → Refleksi</p></div>
+</section>
+
+<section id="gamelan" class="section">
+<div class="back">Materi Interaktif</div><h2>🥁 Kenali Gamelan</h2>
+<div class="grid"><div class="panel"><h3>Pilih alat musik</h3><div class="list">
+<button onclick="showInstrument('Saron','Alat musik bilah logam yang dimainkan dengan dipukul. Dalam kelompok gamelan, saron memainkan balungan atau melodi pokok.')">🔔 Saron</button>
+<button onclick="showInstrument('Gong','Gong berukuran besar yang menghasilkan bunyi rendah dan menandai bagian penting dalam struktur gending.')">🔔 Gong</button>
+<button onclick="showInstrument('Kendang','Kendang merupakan alat musik perkusi yang membantu mengatur irama dan dinamika permainan gamelan.')">🥁 Kendang</button>
+<button onclick="showInstrument('Bonang','Bonang terdiri dari gong-gong kecil yang diletakkan pada rancakan dan dimainkan menggunakan pemukul.')">🔔 Bonang</button>
+</div></div><div class="panel" id="instrument"><h3>Selamat datang!</h3><p class="muted">Pilih alat musik di sebelah kiri untuk melihat penjelasan sederhana.</p></div></div>
+</section>
+
+<section id="quiz" class="section">
+<h2>🎧 Tebak Bunyi Gamelan</h2><div class="panel quiz"><p><b>Simulasi kuis:</b> Alat musik manakah yang biasanya membantu mengatur irama dan dinamika permainan gamelan?</p>
+<button onclick="answer(false)">A. Gong</button><button onclick="answer(true)">B. Kendang</button><button onclick="answer(false)">C. Saron</button><button onclick="answer(false)">D. Bonang</button><div id="score" class="score"></div></div>
+</section>
+
+<section id="chat" class="section">
+<h2>🤖 Tanya KA-RAWIT</h2><div class="panel"><div class="chat" id="chatbox"><div class="msg ai"><b>KA-RAWIT AI:</b> Halo! Saya teman belajar karawitan. Coba tanyakan: “Apa fungsi gong?”</div></div><div class="input"><input id="question" placeholder="Tulis pertanyaan tentang karawitan..."><button onclick="ask()">Kirim</button></div></div>
+</section>
+
+<section id="creator" class="section">
+<h2>✍️ Kreator Lirik Budaya</h2><div class="panel"><p class="muted">Masukkan tema. Prototype ini memberikan contoh ide lirik yang kemudian dapat dikembangkan siswa.</p><div class="input"><input id="theme" placeholder="Contoh: gotong royong"><button onclick="makeLyric()">Buat Ide</button></div><div id="lyric" style="margin-top:18px"></div></div>
+</section>
+
+<section id="story" class="section">
+<h2>📖 Cerita Karawitan</h2><div class="panel"><h3>Contoh cerita</h3><p>“Pagi itu, kelompok kami berlatih karawitan. Satu teman menjaga irama, teman lain memainkan saron, dan kami belajar mendengarkan satu sama lain. Dari latihan itu kami memahami bahwa suara yang indah lahir dari kerja sama.”</p><p class="muted">Siswa dapat mengembangkan cerita berdasarkan pengalaman mereka sendiri dengan bantuan AI.</p></div>
+</section>
+
+<section id="reflection" class="section">
+<h2>💭 Refleksi Belajar</h2><div class="panel"><h3>Hari ini saya belajar...</h3><textarea id="ref" style="width:100%;height:130px;border:1px solid #dbe2ea;border-radius:12px;padding:12px" placeholder="Tuliskan pengalamanmu..."></textarea><br><button class="cta" style="margin-top:10px" onclick="saveReflection()">Simpan Refleksi</button><div id="saved" class="score"></div></div>
+</section>
+
+<section id="teacher" class="section">
+<h2>👩‍🏫 Ruang Guru</h2><div class="cards"><div class="card"><h3>📚 Materi</h3><div class="muted">Atur materi sesuai fase dan kelas.</div></div><div class="card"><h3>📝 Aktivitas</h3><div class="muted">Rancang kuis, proyek, dan refleksi.</div></div><div class="card"><h3>📊 Monitoring</h3><div class="muted">Pantau karya dan perkembangan siswa.</div></div><div class="card"><h3>🎯 Karakter</h3><div class="muted">Catat perkembangan gotong royong, disiplin, tanggung jawab, dan kreativitas.</div></div></div></section>
+
+<div class="footer">Prototype konsep • KA-RAWIT AI • SD Negeri 1 Pojok • Pembelajaran Mendalam</div>
+</main>
+</div>
+<script>
+const titles={home:'Beranda',gamelan:'Kenali Gamelan',quiz:'Tebak Bunyi',chat:'Tanya KA-RAWIT',creator:'Kreator Lirik',story:'Cerita Karawitan',reflection:'Refleksi Belajar',teacher:'Ruang Guru'};
+function go(id){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));document.getElementById('pageTitle').textContent=titles[id];window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>go(b.dataset.page));
+function showInstrument(n,t){document.getElementById('instrument').innerHTML='<h2>🎼 '+n+'</h2><p>'+t+'</p><div class="pill">Nilai karakter: kerja sama • disiplin • tanggung jawab</div>'}
+function answer(ok){document.getElementById('score').textContent=ok?'✅ Benar! Kendang membantu mengatur irama dan dinamika.':'❌ Coba lagi. Pikirkan alat yang berperan mengatur irama.'}
+function ask(){let q=document.getElementById('question').value.trim();if(!q)return;let box=document.getElementById('chatbox');box.innerHTML+=`<div class="msg me">${q}</div>`;let a='Saya akan membantu menjelaskan karawitan dengan bahasa sederhana. ';if(/gong/i.test(q))a+='Gong berukuran besar dan berfungsi menandai bagian penting dalam struktur gending.';else if(/saron/i.test(q))a+='Saron adalah alat musik bilah logam yang dimainkan dengan dipukul dan memainkan bagian balungan.';else if(/kendang/i.test(q))a+='Kendang membantu mengatur irama dan dinamika permainan gamelan.';else a+='Coba tanyakan tentang gong, saron, kendang, bonang, nilai karakter, atau sejarah karawitan.';box.innerHTML+=`<div class="msg ai"><b>KA-RAWIT AI:</b> ${a}</div>`;document.getElementById('question').value='';box.scrollTop=box.scrollHeight}
+function makeLyric(){let t=document.getElementById('theme').value||'budaya';document.getElementById('lyric').innerHTML='<div class="panel" style="background:#f7fbf9"><b>Ide lirik tema “'+t+'”</b><p>Gamelan berbunyi bersama,<br>Kita belajar menjaga budaya,<br>Dengan kerja sama dan semangat,<br>Warisan leluhur terus terawat.</p><small>💡 Kembangkan kembali dengan kata-kata dan pengalamanmu sendiri.</small></div>'}
+function saveReflection(){let r=document.getElementById('ref').value.trim();document.getElementById('saved').textContent=r?'✅ Refleksi tersimpan pada prototype.':'Silakan tulis refleksi terlebih dahulu.'}
+</script>
+</body>
+</html>
